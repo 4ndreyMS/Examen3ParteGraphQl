@@ -1,0 +1,16 @@
+type Libro {
+    id: ID!,
+    nombre: String,
+    descripcion: String,
+    hijo: Int
+}
+
+type Query {
+    Libros(count: Int):[Libro],
+    libro(id: ID): Libro
+}
+
+type Mutation {
+    createLibro(nombre: String, descripcion: String, hijo: Int): Libro,
+     updateLibro(id: ID, nombre: String, descripcion: String, hijo: Int): Libro
+    }
